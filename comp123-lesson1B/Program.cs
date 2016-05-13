@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 *student id: 300857555
 *description: this program demonstartes github and version control
 *best practices.
-*version :0.3 - updated comments for driver class program
+*version :0.4 - extracted outputstringtoconsole from getusername method
 */
 
 
@@ -46,13 +46,44 @@ namespace comp123_lesson1B
         {
             //initialize variables
             string UserName = "";
-            Console.Write("Enter UserName: ");
-           UserName = Console.ReadLine();
-            Console.WriteLine("/n============================");
-            Console.WriteLine("you entered: " + UserName );
+            UserName = GetStringFromConsole();
+            Console.WriteLine("\n============================\n");
+            Console.WriteLine("you entered: " + UserName + "\n");
 
             return UserName;
         }
+        /**
+        *This method writes a string to the console. parameters allow the user to choose to add a new Line chracter
+        *
+        *@method outputstringtoonsole
+        *@param {string} outputstring
+        @param {bool} hasnewline
+        *@return {string} outputstring
+        */
 
+
+
+        private static string GetStringFromConsole()
+        {
+            string UserName;
+            outputstringtoconsole("'enter username: ", false);
+            UserName = Console.ReadLine();
+            return UserName;
+        }
+
+        private static string outputstringtoconsole(string outputstring, bool hasNewLine)
+        {
+            if(hasNewLine)
+            {
+                Console.WriteLine(outputstring);
+            }
+            else
+            {
+
+                Console.Write(outputstring);
+            }
+
+            return outputstring;
+        }
     }
 }
