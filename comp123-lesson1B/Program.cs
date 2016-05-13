@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 *student id: 300857555
 *description: this program demonstartes github and version control
 *best practices.
-*version :0.1
+*version :0.2 - added the getusername method
 */
 
 
@@ -23,6 +23,26 @@ namespace comp123_lesson1B
     {
         static void Main(string[] args)
         {
+            GetUserName();
         }
+
+        /**
+        *This method reads the username from the console
+        *@method GetUserName
+        *@return {string} UserName
+        */
+
+        public static string GetUserName()
+        {
+            //initialize variables
+            string UserName = "";
+            Console.Write("Enter UserName: ");
+           UserName = Console.ReadLine();
+            Console.WriteLine("/n============================");
+            Console.WriteLine("you entered: " + UserName );
+
+            return UserName;
+        }
+
     }
 }
