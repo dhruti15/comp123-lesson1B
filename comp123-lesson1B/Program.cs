@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 *student id: 300857555
 *description: this program demonstartes github and version control
 *best practices.
-*version :0.2 - added the getusername method
+*version :0.3 - updated comments for driver class program
 */
 
 
@@ -19,8 +19,18 @@ using System.Threading.Tasks;
 
 namespace comp123_lesson1B
 {
+    /**
+    *This is a driver class for our program
+    *@class program
+    *
+    */
     class Program
     {
+        /**
+        *Main method for class program
+        *@param {string[]} args
+        *@cunstructor Main
+        **/
         static void Main(string[] args)
         {
             GetUserName();
